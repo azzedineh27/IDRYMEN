@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,6 +143,7 @@
             from {
                 transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
             }
+
             to {
                 transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
             }
@@ -174,7 +176,8 @@
             min-width: 300px;
         }
 
-        .image-equipe, .image-cinema {
+        .image-equipe,
+        .image-cinema {
             flex-basis: 400px;
             max-width: 100%;
             width: 100%;
@@ -191,7 +194,8 @@
             gap: 20px;
         }
 
-        .txt-grp, .txt-equipe {
+        .txt-grp,
+        .txt-equipe {
             font-size: 16px;
             line-height: 1.6;
             color: #555;
@@ -246,7 +250,7 @@
 
         .footer-logo {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .footer-logo img {
@@ -256,8 +260,9 @@
 
         .footer-social-icons {
             display: flex;
+            justify-content: center;
             gap: 20px;
-            margin-left: 20px;
+            margin-top: 10px;
         }
 
         .footer-social-icons img {
@@ -271,8 +276,10 @@
         }
 
         .footer-credits {
-            margin-right: 20px;
             font-size: 14px;
+            text-align: center;
+            width: 100%;
+            padding-top: 20px;
         }
 
         @media (max-width: 768px) {
@@ -291,6 +298,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="nav-left">
@@ -308,7 +316,7 @@
 
     <div class="banner">
         <div class="message">
-            Découvrez qui nous sommes ! 
+            Découvrez qui nous sommes !
         </div>
         <div class="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><img src="Images/plante1.jpg" alt=""></div>
@@ -332,8 +340,9 @@
                         <h1>Qui sommes-nous</h1>
                     </div>
                     <div class="txt-equipe">
-                        <p>Bonjour à tous, nous sommes l'équipe de FAST AUTO et nous vous souhaitons la bienvenue ! En parcourant les différentes pages,
-                            vous pourrez retrouver une sélection complète de voitures ainsi que les informations les concernant.</p>
+                        <p>Bonjour à tous, nous sommes l'équipe de FAST AUTO et nous vous souhaitons la bienvenue ! En
+                            parcourant les différentes pages, vous pourrez retrouver une sélection complète de voitures
+                            ainsi que les informations les concernant.</p>
                     </div>
                 </div>
                 <div class="image-equipe">
@@ -347,7 +356,11 @@
                             <h1>Notre histoire</h1>
                         </div>
                         <div class="txt-grp">
-                            <p>Depuis notre création en 2024, notre objectif a toujours été de fournir à nos utilisateurs une expérience automobile unique. Nous combinons passion et expertise technique pour créer un site qui va au-delà de la simple consultation de véhicules. Notre voyage a commencé dans une petite salle, et aujourd'hui, nous sommes fiers de toucher des milliers de passionnés à travers le pays.</p>
+                            <p>Depuis notre création en 2024, notre objectif a toujours été de fournir à nos utilisateurs
+                                une expérience automobile unique. Nous combinons passion et expertise technique pour
+                                créer un site qui va au-delà de la simple consultation de véhicules. Notre voyage a
+                                commencé dans une petite salle, et aujourd'hui, nous sommes fiers de toucher des milliers
+                                de passionnés à travers le pays.</p>
                         </div>
                     </div>
                     <div class="image-cinema">
@@ -361,10 +374,12 @@
     <footer>
         <div class="footer-section">
             <div class="footer-logo">
-                <img src="logo_pousse.png" alt="Logo Pousse">
+                <img src="Images\logo_idrymen.webp" alt="Logo Pousse">
                 <p>Reconnectez vos espaces à la nature, avec style.</p>
-                <div class="rating">
-                    <img src="google.png" alt="Google Rating"> 4.5/5
+                <div class="footer-social-icons">
+                    <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                    <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -373,23 +388,8 @@
             <h3>Végétalisez</h3>
             <ul>
                 <li><a href="#">Bureaux</a></li>
-                <li><a href="#">Jardins et terrasses</a></li>
-                <li><a href="#">Hôtel</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="#">Mur végétal</a></li>
-                <li><a href="#">Atelier Team-building</a></li>
-                <li><a href="#">Plantes artificielles</a></li>
-                <li><a href="#">Logo végétal</a></li>
-                <li><a href="#">Toiture végétalisée</a></li>
+                <li><a href="#">Végétalisation</a></li>
                 <li><a href="#">Entretien</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Louez</h3>
-            <ul>
-                <li><a href="#">Location événementielle</a></li>
-                <li><a href="#">Location annuelle</a></li>
             </ul>
         </div>
 
@@ -397,9 +397,9 @@
             <h3>L'entreprise</h3>
             <ul>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Paysagiste</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#"></a>Accueil</li>
+                <li><a href="#"></a>FAQ</li>
             </ul>
         </div>
 
@@ -407,21 +407,22 @@
             <h3>Contactez-nous</h3>
             <ul>
                 <li><a href="#">Devis</a></li>
-                <li><a href="#">Paris</a></li>
-                <li><a href="#">Bordeaux</a></li>
-                <li><a href="#">Lyon</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div><div class="footer-social-icons">
-            <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
-            <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
-            <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
         </div>
-            <div class="footer-credits">
-                Tous droits réservés • Pousse.fr 2023
+
+        <div class="footer-section">
+            <h3>Informations Légales</h3>
+            <ul>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-credits">
+            Tous droits réservés • Idrymen.fr 2024
         </div>
     </footer>
-
-    
-
 </body>
+
 </html>

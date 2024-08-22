@@ -165,48 +165,94 @@
             background-color: #388E3C;
         }
 
-        .summary {
-            display: none;
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        footer {
+            width: 100%;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        .summary-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #4CAF50;
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
             margin-bottom: 10px;
         }
 
-        .summary-content {
-            font-size: 1em;
-            color: #25283B;
+        .footer-section ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        /* Décale la liste des plantes sélectionnées vers la droite */
-        .summary-content ul {
-            margin-left: 20px;
+        .footer-section ul li a:hover {
+            color: #4CAF50;
         }
 
-        /* Style pour le bouton PDF similaire au bouton "Soumettre" */
-        #download-pdf {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 15px;
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 10px;
         }
 
-        #download-pdf:hover {
-            background-color: #388E3C;
+        .footer-logo img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
+        }
+
+        .footer-social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-credits {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-credits {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -231,7 +277,7 @@
 
     <div class="devis-section">
         <h2 class="devis-title">Demande de Devis</h2>
-        <form class="devis-form" id="devis-form" onsubmit="generateSummary(event)">
+        <form class="devis-form" id="devis-form">
             <div class="form-group">
                 <label for="plant-sizes">Sélectionnez la taille des plantes et la quantité</label>
                 <div>
@@ -271,100 +317,63 @@
                 <label><input type="radio" name="projectType" value="Entretien et Végétalisation" required>Entretien et Végétalisation</label>
             </div>
             <div class="form-group">
-                <label>Budget</label>
-                <label><input type="radio" name="budget" value="0-500" required>0-500€</label>
-                <label><input type="radio" name="budget" value="500-1000" required>500-1000€</label>
-                <label><input type="radio" name="budget" value="1000-2500" required>1000-2500€</label>
-                <label><input type="radio" name="budget" value="2500-5000" required>2500-5000€</label>
-                <label><input type="radio" name="budget" value="5000-10000" required>5000-10000€</label>
-                <label><input type="radio" name="budget" value="plus10000" required>Plus de 10000€</label>
-            </div>
-            <div class="form-group">
                 <button type="submit">Soumettre</button>
             </div>
         </form>
-
-        <div class="summary" id="summary">
-            <h3 class="summary-title">Récapitulatif du Devis</h3>
-            <div class="summary-content" id="summary-content"></div>
-            <button id="download-pdf" style="display:none;" onclick="downloadPDF()">Télécharger le PDF</button>
-        </div>
     </div>
 
-    <!-- Inclure jsPDF via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="Images\logo_idrymen.webp" alt="Logo Pousse">
+                <p>Reconnectez vos espaces à la nature, avec style.</p>
+                <div class="footer-social-icons">
+                    <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                    <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
 
-    <script>
-        function generateSummary(event) {
-            event.preventDefault(); // Empêche l'envoi du formulaire
+        <div class="footer-section">
+            <h3>Végétalisez</h3>
+            <ul>
+                <li><a href="#">Bureaux</a></li>
+                <li><a href="#">Végétalisation</a></li>
+                <li><a href="#">Entretien</a></li>
+            </ul>
+        </div>
 
-            // Récupère les données du formulaire
-            const sizeS = parseInt(document.getElementById('size-s').value) || 0;
-            const sizeM = parseInt(document.getElementById('size-m').value) || 0;
-            const sizeL = parseInt(document.getElementById('size-l').value) || 0;
-            const sizeXL = parseInt(document.getElementById('size-xl').value) || 0;
+        <div class="footer-section">
+            <h3>L'entreprise</h3>
+            <ul>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#"></a>Accueil</li>
+                <li><a href="#"></a>FAQ</li>
+            </ul>
+        </div>
 
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const country = document.getElementById('country').value;
-            const projectType = document.querySelector('input[name="projectType"]:checked').value;
-            const budget = document.querySelector('input[name="budget"]:checked').value;
+        <div class="footer-section">
+            <h3>Contactez-nous</h3>
+            <ul>
+                <li><a href="#">Devis</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
 
-            // Calcul du coût total
-            const totalCost = (sizeS * 10) + (sizeM * 20) + (sizeL * 30) + (sizeXL * 40);
+        <div class="footer-section">
+            <h3>Informations Légales</h3>
+            <ul>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
 
-            // Récupère la date actuelle
-            const date = new Date();
-            const formattedDate = date.toLocaleDateString();
-
-            // Génère le récapitulatif
-            const summaryContent = `
-                <p><strong>Date :</strong> ${formattedDate}</p>
-                <p><strong>Client :</strong> ${firstName} ${lastName} (${country})</p>
-                <p><strong>Type de projet :</strong> ${projectType}</p>
-                <p><strong>Budget :</strong> ${budget}</p>
-                <p><strong>Plantes sélectionnées :</strong></p>
-                <ul>
-                    <li>Taille S : ${sizeS} plante(s)</li>
-                    <li>Taille M : ${sizeM} plante(s)</li>
-                    <li>Taille L : ${sizeL} plante(s)</li>
-                    <li>Taille XL : ${sizeXL} plante(s)</li>
-                </ul>
-                <p><strong>Coût total :</strong> ${totalCost}€</p>
-            `;
-
-            // Affiche le récapitulatif
-            document.getElementById('summary-content').innerHTML = summaryContent;
-            document.getElementById('summary').style.display = 'block';
-
-            // Affiche le bouton de téléchargement PDF
-            document.getElementById('download-pdf').style.display = 'inline-block';
-        }
-
-        function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            // Titre du document
-            doc.setFontSize(18);
-            doc.text('Devis réalisé par la société IDRYMEN', 105, 20, null, null, 'center');
-
-            // Informations sur le client
-            doc.setFontSize(14);
-            doc.text('Informations Client', 10, 40);
-            doc.setFontSize(12);
-            const summaryContent = document.getElementById('summary-content').innerText.split("\n");
-            let yPos = 50;
-
-            summaryContent.forEach((line) => {
-                doc.text(line.trim(), 10, yPos);
-                yPos += 8;
-            });
-
-            // Télécharger le fichier PDF
-            doc.save('devis_IDRYMEN.pdf');
-        }
-    </script>
+        <div class="footer-credits">
+            Tous droits réservés • Idrymen.fr 2024
+        </div>
+    </footer>
 </body>
 
 </html>

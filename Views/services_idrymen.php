@@ -140,54 +140,69 @@
         .offer {
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
             overflow: hidden;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
 
         .offer:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .offer-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
 
         .offer-title {
-            font-size: 1.5em;
+            font-size: 2em;
             color: #4CAF50;
+            margin-bottom: 10px;
         }
 
         .offer-description {
-            flex-grow: 1;
-            margin-left: 20px;
             color: #555;
-            font-size: 1em;
+            font-size: 1.2em;
+        }
+
+        .offer-price-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
         }
 
         .offer-price {
-            font-size: 1.5em;
+            font-size: 1.8em;
+            font-weight: bold;
             color: #333;
         }
 
+        .devis-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .devis-button:hover {
+            background-color: #218838;
+        }
+
         .arrow {
-            font-size: 24px;
+            font-size: 2em;
             cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .arrow.down {
-            transform: rotate(0deg);
-        }
-
-        .arrow.up {
-            transform: rotate(180deg);
+            color: #4CAF50;
         }
 
         .offer-content {
@@ -195,54 +210,128 @@
             padding: 20px;
             background-color: #fafafa;
             border-top: 1px solid #ccc;
+            margin-top: 20px;
         }
 
-        .offer-content h3 {
-            margin-top: 0;
-            color: #4CAF50;
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            overflow-x: auto;
         }
 
-        .offer-content ul {
-            padding-left: 20px;
+        .step {
+            flex: 0 0 20%;
+            text-align: center;
+            margin: 0 10px;
         }
 
-        .offer-content li {
+        .step img {
+            max-width: 100px;
+            height: auto;
             margin-bottom: 10px;
         }
 
-        footer {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-item {
+        .step h4 {
+            font-size: 1.1em;
             color: #4CAF50;
-            padding: 10px;
-            margin: 0 6px;
-            text-decoration: none;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            border-radius: 20px;
-            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+            padding: 40px 20px;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social-icons {
+            display: flex;
             justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
         }
 
-        .footer-item:hover {
-            color: #218838;
+        .footer-social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
         }
 
+        .footer-social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-credits {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-credits {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -268,23 +357,45 @@
 <h1>Nos Offres</h1>
 
 <div class="container">
-
     <div class="offer" id="offer-entretien">
         <div class="offer-header">
             <div class="offer-title">Entretien</div>
             <div class="offer-description">Maintenance complète de vos plantes pour un espace vert et harmonieux.</div>
+        </div>
+        <div class="offer-price-section">
             <div class="offer-price">À partir de 100€</div>
+            <a href="index.php?controller=services&action=devis" class="devis-button">Faire un Devis</a>
             <span class="arrow down" onclick="toggleDetails('entretien-details')">&#x25BC;</span>
         </div>
         <div class="offer-content" id="entretien-details">
             <h3>Étapes de l'entretien</h3>
-            <ul>
-                <li>Évaluation de vos plantes existantes</li>
-                <li>Nettoyage régulier des plantes et des pots</li>
-                <li>Arrosage et fertilisation</li>
-                <li>Surveillance de la santé des plantes</li>
-                <li>Remplacement des plantes si nécessaire</li>
-            </ul>
+            <div class="steps-container">
+                <div class="step">
+                    <img src="Images/plante1.jpg" alt="Évaluation">
+                    <h4>Évaluation</h4>
+                    <p>Évaluation de vos plantes existantes</p>
+                </div>
+                <div class="step">
+                    <img src="Images/plante1.jpg" alt="Nettoyage">
+                    <h4>Nettoyage</h4>
+                    <p>Nettoyage régulier des plantes et des pots</p>
+                </div>
+                <div class="step">
+                    <img src="Images/plante1.jpg" alt="Arrosage">
+                    <h4>Arrosage</h4>
+                    <p>Arrosage et fertilisation</p>
+                </div>
+                <div class="step">
+                    <img src="Images/plante1.jpg" alt="Surveillance">
+                    <h4>Surveillance</h4>
+                    <p>Surveillance de la santé des plantes</p>
+                </div>
+                <div class="step">
+                    <img src="Images/plante1.jpg" alt="Remplacement">
+                    <h4>Remplacement</h4>
+                    <p>Remplacement des plantes si nécessaire</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -292,18 +403,41 @@
         <div class="offer-header">
             <div class="offer-title">Végétalisation</div>
             <div class="offer-description">Transformez votre espace de travail en un havre de nature et de bien-être.</div>
+        </div>
+        <div class="offer-price-section">
             <div class="offer-price">À partir de 200€</div>
+            <a href="index.php?controller=services&action=devis" class="devis-button">Faire un Devis</a>
             <span class="arrow down" onclick="toggleDetails('vegetalisation-details')">&#x25BC;</span>
         </div>
         <div class="offer-content" id="vegetalisation-details">
             <h3>Étapes de la végétalisation</h3>
-            <ul>
-                <li>Consultation et conception personnalisée</li>
-                <li>Sélection des plantes adaptées à votre espace</li>
-                <li>Installation de solutions de végétalisation</li>
-                <li>Optimisation pour un entretien facile</li>
-                <li>Suivi après installation</li>
-            </ul>
+            <div class="steps-container">
+                <div class="step">
+                    <img src="images/consultation.png" alt="Consultation">
+                    <h4>Consultation</h4>
+                    <p>Consultation et conception personnalisée</p>
+                </div>
+                <div class="step">
+                    <img src="images/selection.png" alt="Sélection">
+                    <h4>Sélection</h4>
+                    <p>Sélection des plantes adaptées à votre espace</p>
+                </div>
+                <div class="step">
+                    <img src="images/installation.png" alt="Installation">
+                    <h4>Installation</h4>
+                    <p>Installation de solutions de végétalisation</p>
+                </div>
+                <div class="step">
+                    <img src="images/optimisation.png" alt="Optimisation">
+                    <h4>Optimisation</h4>
+                    <p>Optimisation pour un entretien facile</p>
+                </div>
+                <div class="step">
+                    <img src="images/suivi.png" alt="Suivi">
+                    <h4>Suivi</h4>
+                    <p>Suivi après installation</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -311,29 +445,94 @@
         <div class="offer-header">
             <div class="offer-title">Végétalisation + Entretien</div>
             <div class="offer-description">Profitez d'un espace vert avec un entretien régulier sans soucis.</div>
+        </div>
+        <div class="offer-price-section">
             <div class="offer-price">À partir de 300€</div>
+            <a href="index.php?controller=services&action=devis" class="devis-button">Faire un Devis</a>
             <span class="arrow down" onclick="toggleDetails('complet-details')">&#x25BC;</span>
         </div>
         <div class="offer-content" id="complet-details">
             <h3>Étapes combinées</h3>
-            <ul>
-                <li>Conception et installation de la végétalisation</li>
-                <li>Entretien complet régulier des plantes</li>
-                <li>Surveillance de la santé des plantes</li>
-                <li>Remplacement des plantes si nécessaire</li>
-                <li>Support continu pour optimiser la végétalisation</li>
-            </ul>
+            <div class="steps-container">
+                <div class="step">
+                    <img src="images/conception_installation.png" alt="Conception et Installation">
+                    <h4>Conception & Installation</h4>
+                    <p>Conception et installation de la végétalisation</p>
+                </div>
+                <div class="step">
+                    <img src="Images/entretien.png" alt="Entretien">
+                    <h4>Entretien</h4>
+                    <p>Entretien complet régulier des plantes</p>
+                </div>
+                <div class="step">
+                    <img src="images/surveillance.png" alt="Surveillance">
+                    <h4>Surveillance</h4>
+                    <p>Surveillance de la santé des plantes</p>
+                </div>
+                <div class="step">
+                    <img src="images/remplacement.png" alt="Remplacement">
+                    <h4>Remplacement</h4>
+                    <p>Remplacement des plantes si nécessaire</p>
+                </div>
+                <div class="step">
+                    <img src="images/support.png" alt="Support continu">
+                    <h4>Support continu</h4>
+                    <p>Support continu pour optimiser la végétalisation</p>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
 
 <footer>
-    <div class="footer-links">
-        <a href="about.html" class="footer-item"><span>À propos</span></a>
-        <a href="rgpd_idrymen.html" class="footer-item"><span>Politique de Confidentialité</span></a>
-        <a href="terms.html" class="footer-item"><span>Conditions</span></a>
-        <a href="contact_idrymen.php" class="footer-item"><span>Contact</span></a>
+    <div class="footer-section">
+        <div class="footer-logo">
+            <img src="Images\logo_idrymen.webp" alt="Logo Pousse">
+            <p>Reconnectez vos espaces à la nature, avec style.</p>
+            <div class="footer-social-icons">
+                <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
+                <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <h3>Végétalisez</h3>
+        <ul>
+            <li><a href="#">Bureaux</a></li>
+            <li><a href="#">Végétalisation</a></li>
+            <li><a href="#">Entretien</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>L'entreprise</h3>
+        <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#"></a>Accueil</li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contactez-nous</h3>
+        <ul>
+            <li><a href="#">Devis</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Informations Légales</h3>
+        <ul>
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-credits">
+        Tous droits réservés • Idrymen.fr 202
     </div>
 </footer>
 
