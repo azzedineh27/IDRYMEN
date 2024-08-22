@@ -139,18 +139,18 @@
 <body>
     <nav>
         <div class="nav-left">
-            <img src="logo_idrymen.webp" alt="Logo" class="nav-logo">
+            <img src="Images/logo_idrymen.webp" alt="Logo" class="nav-logo">
             <span class="site-name">IDRYMEN</span>
         </div>
         <div class="nav-hamburger">
             <span class="material-symbols-outlined">menu</span>
         </div>
         <div class="nav-links">
-            <a href="#" class="nav-item"><span>Accueil</span></a>
-            <a href="#" class="nav-item"><span>Services</span></a>
-            <a href="#" class="nav-item"><span>Offres</span></a>
-            <a href="#" class="nav-item"><span>Contact</span></a>
-            <a href="#" class="nav-item"><span>Devis</span></a>
+            <a href="index.php?controller=accueil&action=accueil" class="nav-item" data-target="Accueil">Accueil</a>
+            <a href="index.php?controller=services&action=QSN" class="nav-item" data-target="QSN">A propos</a>
+            <a href="index.php?controller=services&action=services" class="nav-item" data-target="Services"><span>Services</span></a>
+            <a href="index.php?controller=contact&action=contact" class="nav-item" data-target="Contact">Contact</a>
+            <a href="index.php?controller=services&action=devis" class="nav-item" data-target="Devis"><span>Devis</span></a>
         </div>
     </nav>
 

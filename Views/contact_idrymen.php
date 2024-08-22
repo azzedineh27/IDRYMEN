@@ -50,195 +50,220 @@ if (isset($_POST['submit'])) {
     <title>Contactez-nous</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
+        @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+        @import url('https://fonts.cdnfonts.com/css/poppins');
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 80px;
-            background: url('/SITE_WEB/Images/fondblanc3.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            align-items: center; /* Align in the middle vertically */
-            justify-content: center; /* Center horizontally */
-            height: 80vh;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 80px;
+    background: url('/SITE_WEB/Images/fondblanc3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            z-index: 1000;
-            transition: background-color 0.3s;
-        }
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 1));
+}
 
-        .nav-left {
-            display: flex;
-            align-items: center;
-        }
+.nav-left {
+    display: flex;
+    align-items: center;
+}
 
-        .nav-logo {
-            height: 50px;
-            margin-right: 20px;
-        }
+.nav-logo {
+    height: 50px;
+    margin-right: 20px;
+}
 
-        .site-name {
-            font-weight: bold;
-            color: #4CAF50;
-            font-size: 1.5em;
-        }
+.site-name {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.5em;
+}
+nav, .nav-item, .site-name {
+    font-family: 'Poppins', sans-serif;
+}
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: flex-end;
-        }
 
-        .nav-item {
-            color: #4CAF50;
-            padding: 10px;
-            margin: 0 6px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            text-decoration: none;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
 
-        .nav-item span {
-            position: relative;
-            z-index: 1;
-        }
+.nav-item {
+    position: relative;
+    color: #4CAF50;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
 
-        .nav-hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #4CAF50;
-        }
+.nav-item span {
+    position: relative;
+    z-index: 1;
+}
 
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: #fff;
-                width: 100%;
-                display: none;
-            }
+.nav-item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #4CAF50;
+    transition: width 0.4s ease-in-out;
+}
 
-            .nav-item {
-                margin: 10px 0;
-            }
+.nav-item:hover {
+    color: #2e7d32;
+}
 
-            .nav-hamburger {
-                display: block;
-            }
+.nav-item:hover::before {
+    width: 100%;
+}
 
-            .nav-links.active {
-                display: flex;
-            }
-        }
+.nav-hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4CAF50;
+}
 
-        .notification {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            opacity: 1;
-            transition: opacity 0.5s ease;
-            animation: fadeIn 0.5s ease;
-        }
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        display: none;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
+    .nav-item {
+        margin: 10px 0;
+    }
 
-        .formulaire-section {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 350px; /* Reduced the form width */
-            margin: 0 auto;
-        }
+    .nav-hamburger {
+        display: block;
+    }
 
-        .formulaire-section h2 {
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            text-align: center;
-            color: #4CAF50;
-            font-weight: bold;
-        }
+    .nav-links.active {
+        display: flex;
+    }
+}
 
-        .formulaire-section form {
-            display: grid;
-            grid-gap: 10px;
-        }
+.notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease;
+}
 
-        .formulaire-section label {
-            font-weight: bold;
-        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 
-        .formulaire-section input,
-        .formulaire-section textarea {
-            width: 100%;
-            padding-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            transition: border-color 0.3s ease;
-        }
+.formulaire-section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
 
-        .formulaire-section input:focus,
-        .formulaire-section textarea:focus {
-            border-color: #4CAF50;
-        }
+.formulaire-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #4CAF50;
+    font-weight: bold;
+}
 
-        .formulaire-section button {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            width: 100%;
-        }
+.formulaire-section form {
+    display: grid;
+    grid-gap: 10px;
+}
 
-        .formulaire-section button:hover {
-            background-color: #218838;
-        }
+.formulaire-section label {
+    font-weight: bold;
+}
+
+.formulaire-section input,
+.formulaire-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.formulaire-section input:focus,
+.formulaire-section textarea:focus {
+    border-color: #4CAF50;
+}
+
+.formulaire-section button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.formulaire-section button:hover {
+    background-color: #218838;
+}
+
     </style>
 </head>
 <body>
 
 <nav>
     <div class="nav-left">
-        <img src="logo_idrymen.webp" alt="Logo" class="nav-logo">
+        <img src="Images/logo_idrymen.webp" alt="Logo" class="nav-logo">
         <span class="site-name">IDRYMEN</span>
     </div>
     <div class="nav-hamburger">
@@ -278,8 +303,16 @@ if (isset($_POST['submit'])) {
 </div>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu functionality for mobile responsiveness
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Notification handling after form submission
     <?php if (isset($message)) { ?>
         var notification = document.getElementById('message-container');
         notification.style.display = 'block';
@@ -291,6 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     <?php } ?>
 });
+
 
 </script>
     

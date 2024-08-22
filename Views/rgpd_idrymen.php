@@ -6,35 +6,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+        @import url('https://fonts.cdnfonts.com/css/poppins');
         body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Arrière-plan gris clair */
-    color: #333; /* Couleur de texte principale */
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .main-content {
     flex: 1;
-    padding: 40px; /* Plus de padding pour plus d'espace */
-    background-color: #fff; /* Arrière-plan blanc pour le contenu principal */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le contenu principal */
-    margin: 20px auto; /* Centrer le contenu avec des marges automatiques */
-    max-width: 800px; /* Limite de largeur pour le contenu principal */
-    border-radius: 8px; /* Coins légèrement arrondis */
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
 }
 
 h1, h2 {
-    color: #1a1a1a; /* Couleur de titre foncé */
+    color: #1a1a1a;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center; /* Centrer le titre principal */
+    text-align: center;
 }
 
 h2 {
@@ -43,198 +45,188 @@ h2 {
 }
 
 p, ul {
-    line-height: 1.6; /* Améliore la lisibilité */
+    line-height: 1.6;
     font-size: 1.1em;
     margin: 10px 0;
 }
 
 ul {
-    padding-left: 20px; /* Indentation des listes */
-}
-
-.header {
-    /* Supposons que le header a une hauteur fixe */
-    height: 10vh; /* ou la hauteur fixe en px */
-}
-
-.main-content {
-    flex: 1; /* Permet au contenu principal de remplir l'espace disponible */
-    padding-bottom: 20px; /* Ajoutez un padding en bas si nécessaire */
+    padding-left: 20px;
 }
 
 nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            z-index: 1000;
-            transition: background-color 0.3s;
-        }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 1));
+}
 
-        .nav-left {
-            display: flex;
-            align-items: center;
-        }
+.nav-left {
+    display: flex;
+    align-items: center;
+}
 
-        .nav-logo {
-            height: 50px;
-            margin-right: 20px;
-        }
+.nav-logo {
+    height: 50px;
+    margin-right: 20px;
+}
 
-        .site-name {
-            font-weight: bold;
-            color: #4CAF50;
-            font-size: 1.5em;
-        }
+.site-name {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.5em;
+}
+nav, .nav-item, .site-name {
+    font-family: 'Poppins', sans-serif;
+}
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: flex-end;
-        }
 
-        .nav-item {
-            color: #4CAF50;
-            padding: 10px;
-            margin: 0 6px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
 
-        .nav-item span {
-            position: relative;
-            z-index: 1;
-        }
+.nav-item {
+    position: relative;
+    color: #4CAF50;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
 
-        .nav-item::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #4CAF50;
-            z-index: 0;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
+.nav-item span {
+    position: relative;
+    z-index: 1;
+}
 
-        .nav-item:hover::before {
-            transform: translate(-50%, -50%) scale(1.3);
-        }
+.nav-item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #4CAF50;
+    transition: width 0.4s ease-in-out;
+}
 
-        .nav-item:hover {
-            color: white;
-        }
+.nav-item:hover {
+    color: #2e7d32;
+}
 
-        .nav-hamburger {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #4CAF50;
-        }
+.nav-item:hover::before {
+    width: 100%;
+}
 
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: #fff;
-                width: 100%;
-                display: none;
-            }
+.nav-hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4CAF50;
+}
 
-            .nav-item {
-                margin: 10px 0;
-            }
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        display: none;
+    }
 
-            .nav-hamburger {
-                display: block;
-            }
+    .nav-item {
+        margin: 10px 0;
+    }
 
-            .nav-links.active {
-                display: flex;
-            }
-        }
+    .nav-hamburger {
+        display: block;
+    }
 
-        footer {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    .nav-links.active {
+        display: flex;
+    }
+}
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+footer {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        .footer-item {
-            color: #4CAF50;
-            padding: 10px;
-            margin: 0 6px;
-            text-decoration: none;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            border-radius: 20px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        .footer-item span {
-            position: relative;
-            z-index: 1;
-        }
+.footer-item {
+    color: #4CAF50;
+    padding: 10px;
+    margin: 0 6px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .footer-item::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #4CAF50;
-            z-index: 0;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
+.footer-item span {
+    position: relative;
+    z-index: 1;
+}
 
-        .footer-item:hover::before {
-            transform: translate(-50%, -50%) scale(1.3);
-        }
+.footer-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    z-index: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-        .footer-item:hover {
-            color: white;
-        }
+.footer-item:hover::before {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.footer-item:hover {
+    color: white;
+}
+
     </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-left">
-                <img src="logo_idrymen.webp" alt="Logo" class="nav-logo">
+                <img src="Images/logo_idrymen.webp" alt="Logo" class="nav-logo">
                 <span class="site-name">IDRYMEN</span>
             </div>
             <div class="nav-hamburger">
@@ -339,17 +331,20 @@ nav {
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.nav-hamburger');
-            const navLinks = document.querySelector('.nav-links');
+    // Hamburger menu functionality for mobile responsiveness
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Disable right-click to protect content
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+});
 
-        document.addEventListener('contextmenu', function(event) {
-            event.preventDefault();
-        });
     </script>
 </body>
 </html>
