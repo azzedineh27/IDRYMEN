@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 80px;
-    background: url('/SITE_WEB/Images/fondblanc3.jpg') no-repeat center center fixed;
+
     background-size: cover;
     display: flex;
     align-items: center;
@@ -180,14 +180,17 @@ nav, .nav-item, .site-name {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Légère transparence pour correspondre au design général */
+    color: #4CAF50; /* Couleur principale de la charte graphique */
+    padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour plus de profondeur */
     opacity: 1;
     transition: opacity 0.5s ease;
     animation: fadeIn 0.5s ease;
+    font-family: 'Poppins', sans-serif; /* Police principale utilisée */
+    font-size: 1em;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -201,9 +204,62 @@ nav, .nav-item, .site-name {
     }
 }
 
+.notification.success {
+    border: 2px solid #4CAF50; 
+}
+
+.notification.error {
+    border: 2px solid #ff5252;
+    color: #ff5252; 
+}
+
+/* Animation de vol des feuilles de gauche à droite */
+@keyframes fly {
+    0% {
+        transform: translateX(-100vw) rotate(0deg);
+    }
+    100% {
+        transform: translateX(100vw) rotate(360deg);
+    }
+}
+
+.leaf {
+    position: absolute;
+    top: 50%; /* Ajustez cette valeur pour déterminer la hauteur de départ de la feuille */
+    width: 50px;
+    height: 50px;
+    background-image: url('Images/feuille.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fly 10s linear infinite;
+    pointer-events: none; /* Les feuilles ne doivent pas interférer avec les clics */
+}
+
+/* Optionnel : Variations pour que les feuilles ne volent pas toutes de la même manière */
+.leaf:nth-child(1) {
+    animation-duration: 8s; /* Différentes durées pour plus de variété */
+    top: 20%; /* Différentes hauteurs pour chaque feuille */
+}
+
+.leaf:nth-child(2) {
+    animation-duration: 12s;
+    top: 40%;
+}
+
+.leaf:nth-child(3) {
+    animation-duration: 10s;
+    top: 60%;
+}
+
+.leaf:nth-child(4) {
+    animation-duration: 14s;
+    top: 80%;
+}
+
+
 .formulaire-section {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 25px 45px 25px 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -235,6 +291,7 @@ nav, .nav-item, .site-name {
     border-radius: 5px;
     border: 1px solid #ccc;
     transition: border-color 0.3s ease;
+    resize: none;
 }
 
 .formulaire-section input:focus,
@@ -277,6 +334,13 @@ nav, .nav-item, .site-name {
         <a href="index.php?controller=services&action=devis" class="nav-item" data-target="Devis"><span>Devis</span></a>
     </div>
 </nav>
+
+   <!-- Feuilles flottantes en arrière-plan -->
+   <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
 
 <div class="formulaire-section">
     <h2>Contactez-nous</h2>

@@ -620,7 +620,7 @@ footer {
     </div>
 
     <div class="reviews-section">
-        <h2 class="reviews-title">Avis de nos clients</h2>
+        <h2 class="reviews-title">Derniers avis de nos clients</h2>
         <div class="reviews-container">
             <div class="review">
                 <div class="reviewer">Jean Dupont</div>
@@ -648,7 +648,7 @@ footer {
                 <p>Reconnectez vos espaces à la nature, avec style.</p>
                 <div class="footer-social-icons">
                     <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
-                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Snapchat"></a>
                     <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
@@ -684,8 +684,8 @@ footer {
         <div class="footer-section">
             <h3>Informations Légales</h3>
             <ul>
-                <li><a href="#">Mentions Légales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="index.php?controller=mentions&action=mentions">Mentions Légales</a></li>
+                <li><a href="index.php?controller=mentions&action=politique">Politique de confidentialité</a></li>
             </ul>
         </div>
 

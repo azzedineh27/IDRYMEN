@@ -9,12 +9,13 @@ if (session_id() === '') {
 
 require_once "Model/Model_idrymen.php";
 require_once "Controllers/Controller_accueil.php";
+require_once "Controllers/Controller_mentions.php";
 require_once "Controllers/Controller_services.php";
 require_once "Controllers/Controller_contact.php";
 require_once "Controllers/Controller.php";
 
 // Liste des contrôleurs
-$controllers = ["accueil","services", "contact"];
+$controllers = ["accueil","services", "contact","mentions"];
 // Nom du contrôleur par défaut
 $controller_default = "accueil";
 

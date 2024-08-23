@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Document</title>
     <style>
-        @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 * {
@@ -198,27 +198,33 @@ nav {
     padding: 50px 20px;
 }
 
+.histoire-section {
+    display: flex;
+    flex-direction: row; /* Alignement horizontal du texte et de l'image */
+    align-items: center; /* Aligner verticalement au centre */
+    gap: 20px;
+}
+
 .histoire-texte {
-    flex: 1;
+    flex: 2; /* Prend plus de place que l'image */
     min-width: 300px;
 }
 
 .image-equipe,
 .image-cinema {
-    flex-basis: 400px;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    flex: 1;
+    max-width: 300px; /* Limite la largeur maximale à 300px */
+    height: auto; /* Maintient le ratio de l'image */
     border-radius: 10px;
     object-fit: cover;
-    margin-top: 20px;
 }
 
-.histoire-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
+/* Si vous souhaitez ajuster plus spécifiquement */
+.image-cinema img, 
+.image-equipe img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas la taille de son conteneur */
+    height: auto;
+    width: 150%; /* Définit la largeur de l'image à 50% de son conteneur */
 }
 
 .txt-grp,
@@ -322,6 +328,15 @@ footer {
     .footer-credits {
         text-align: center;
     }
+
+    .histoire-section {
+        flex-direction: column; /* Retourne à l'alignement vertical sur mobile */
+    }
+
+    .image-equipe,
+    .image-cinema {
+        max-width: 100%; /* Laisse l'image prendre toute la largeur sur mobile */
+    }
 }
 
     </style>
@@ -368,9 +383,9 @@ footer {
                         <h1>Qui sommes-nous</h1>
                     </div>
                     <div class="txt-equipe">
-                        <p>Bonjour à tous, nous sommes l'équipe de FAST AUTO et nous vous souhaitons la bienvenue ! En
-                            parcourant les différentes pages, vous pourrez retrouver une sélection complète de voitures
-                            ainsi que les informations les concernant.</p>
+                        <p>Bonjour à tous, nous sommes l'équipe d'Idrymen, spécialistes de la végétalisation d'espaces professionnels, et nous vous souhaitons la bienvenue ! 
+                            En parcourant notre site, vous découvrirez une large gamme de solutions naturelles pour transformer vos bureaux en véritables havres de verdure. 
+                            Nos services incluent la conception, l'installation et l'entretien de végétalisation adaptée à vos besoins.</p>
                     </div>
                 </div>
                 <div class="image-equipe">
@@ -384,11 +399,10 @@ footer {
                             <h1>Notre histoire</h1>
                         </div>
                         <div class="txt-grp">
-                            <p>Depuis notre création en 2024, notre objectif a toujours été de fournir à nos utilisateurs
-                                une expérience automobile unique. Nous combinons passion et expertise technique pour
-                                créer un site qui va au-delà de la simple consultation de véhicules. Notre voyage a
-                                commencé dans une petite salle, et aujourd'hui, nous sommes fiers de toucher des milliers
-                                de passionnés à travers le pays.</p>
+                            <p>Fondée en 2023, Idrymen est née d'une passion commune pour la nature et l'idée de reconnecter les lieux de travail avec des éléments naturels. 
+                                Depuis nos débuts modestes, nous avons évolué pour devenir une référence dans la végétalisation des bureaux à travers le pays. 
+                                Notre mission est simple : allier esthétisme et bien-être en transformant des espaces de travail classiques en écosystèmes vivants. 
+                                Aujourd'hui, nous sommes fiers d'accompagner de nombreuses entreprises dans cette démarche innovante et écoresponsable.</p>
                         </div>
                     </div>
                     <div class="image-cinema">
