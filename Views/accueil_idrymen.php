@@ -522,22 +522,23 @@ footer {
 
     <div class="section">
         <div class="section-content">
-            <h2 class="section-title">Végétaliser les espaces de travail pour agir sur le bien-être au bureau</h2>
+            <h2 class="section-title">Aménagement végétal pour des espaces de travail vivants et inspirants</h2>
             <p class="section-description">
-                <strong>GardenLink</strong> vous accompagne dans l’aménagement végétal de bureau et de vos espaces de vie et de travail.
+                <strong>IDRYMEN</strong> transforme vos espaces professionnels et de vie avec des aménagements végétaux uniques et sur mesure.
             </p>
             <p class="section-description">
-                Nous apportons des <strong>solutions végétales innovantes</strong> pour adapter les espaces de travail aux attentes de nature, de modularité, de distanciation et de protection. Nos formules de <strong>location de plantes de bureau à Paris</strong>, ou de vente plus entretien, proposent des formats novateurs et particulièrement adaptés aux nouveaux espaces de travail.
+                Nous proposons des <strong>solutions végétales durables et innovantes</strong> pour enrichir vos bureaux et lieux de travail avec des concepts adaptés aux besoins modernes de bien-être, de flexibilité et de respect des distances. Que ce soit à travers nos formules de <strong>location de plantes</strong> à longue durée ou via nos services de vente et d'entretien, nous offrons des solutions créatives pour les environnements de travail contemporains.
             </p>
             <p class="section-description">
-                Notre système de culture est propre, basé sur <strong>l’hydroponie</strong>, permettant une croissance rapide et harmonieuse de nos plantes. Nos plantes sont vivantes et leurs évolutions contribuent à plus d’intérêt et d’interactivité avec les collaborateurs.
+                Nos plantes, cultivées en <strong>hydroponie</strong>, garantissent une croissance saine et rapide, tout en demandant peu d'entretien. Vivantes et évolutives, elles apportent une dimension supplémentaire à vos espaces, favorisant la connexion avec la nature et stimulant l'engagement des collaborateurs.
             </p>
             <p class="section-description">
-                Notre <strong>engagement RSE</strong> s’appuie sur une gamme conçue et <strong>fabriquée en France</strong> dans une démarche <strong>écoresponsable</strong>, sur la culture de <strong>plantes vivantes</strong> et sur une forte implication <strong>sociale et sociétale</strong>.
+                Notre <strong>démarche écoresponsable</strong> repose sur des produits conçus et <strong>fabriqués en France</strong>, respectueux de l'environnement, et sur une forte implication dans des actions <strong>sociales et sociétales</strong>. Nous faisons du développement durable une priorité pour offrir des espaces plus verts et plus vivants.
             </p>
         </div>
-        <img src="Images/accueil_presentation.jpg" alt="Végétalisation de bureau" class="section-image">
+        <img src="Images/accueil_presentation.jpg" alt="Aménagement végétal IDRYMEN" class="section-image">
     </div>
+
 
 
     <div class="message">
