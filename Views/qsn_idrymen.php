@@ -148,7 +148,7 @@ nav {
 
 .banner .message {
     position: absolute;
-    top: 20%;
+    top: 10%; /* Réduire ce pourcentage pour éloigner le texte de l'animation */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -157,6 +157,14 @@ nav {
     text-align: center;
     font-family: 'ICA Rubrik', sans-serif;
 }
+
+@media (max-width: 768px) {
+    .banner .message {
+        top: 15%; /* Ajuster cette valeur pour plus d'espace sur les petits écrans */
+        font-size: 40px; /* Réduire la taille de la police pour mieux s'adapter aux écrans plus petits */
+    }
+}
+
 
 .banner .slider {
     position: relative;
@@ -420,7 +428,7 @@ footer {
                 <p>Reconnectez vos espaces à la nature, avec style.</p>
                 <div class="footer-social-icons">
                     <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
-                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Snapchat"></a>
                     <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
@@ -429,35 +437,35 @@ footer {
         <div class="footer-section">
             <h3>Végétalisez</h3>
             <ul>
-                <li><a href="#">Bureaux</a></li>
-                <li><a href="#">Végétalisation</a></li>
-                <li><a href="#">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-entretien">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#vegetalisation-details">Végétalisation</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-complet">Végétalisation et Entretien</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>L'entreprise</h3>
             <ul>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#"></a>Accueil</li>
-                <li><a href="#"></a>FAQ</li>
+                <li><a href="index.php?controller=accueil&action=accueil"></a>Accueil</li>
+                <li><a href="index.php?controller=services&action=QSN">À propos</a></li>
+                <li><a href="index.php?controller=services&action=services">Services</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#faq">FAQ</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#avis">Avis</a></li>
             </ul>
         </div>
-
-        <div class="footer-section">
+            <div class="footer-section">
             <h3>Contactez-nous</h3>
             <ul>
-                <li><a href="#">Devis</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php?controller=services&action=devis">Devis</a></li>
+                <li><a href="index.php?controller=contact&action=contact">Contact</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>Informations Légales</h3>
             <ul>
-                <li><a href="#">Mentions Légales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="index.php?controller=mentions&action=mentions">Mentions Légales</a></li>
+                <li><a href="index.php?controller=mentions&action=politique">Politique de confidentialité</a></li>
             </ul>
         </div>
 

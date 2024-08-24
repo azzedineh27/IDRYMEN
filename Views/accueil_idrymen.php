@@ -14,7 +14,7 @@
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    padding: 0; /* Removed padding-top */
+    padding: 0;
     background-color: #f4f4f4;
 }
 
@@ -561,7 +561,7 @@ footer {
     </div>
 
     <!-- FAQ Section -->
-    <div class="faq-section">
+    <div class="faq-section" id="faq">
         <div class="faq-container">
             <h2 class="faq-title">Questions fréquentes</h2>
             <p class="faq-description">
@@ -619,7 +619,7 @@ footer {
         </div>
     </div>
 
-    <div class="reviews-section">
+    <div class="reviews-section" id="avis">
         <h2 class="reviews-title">Derniers avis de nos clients</h2>
         <div class="reviews-container">
             <div class="review">
@@ -635,7 +635,7 @@ footer {
             <div class="review">
                 <div class="reviewer">Pauline Petit</div>
                 <div class="stars">★★★★★</div>
-                <div class="text">Excellente expérience avec GardenLink. Les plantes sont en parfaite santé.</div>
+                <div class="text">Excellente expérience avec Idrymen. Les plantes sont en parfaite santé.</div>
             </div>
         </div>
     </div>
@@ -657,27 +657,27 @@ footer {
         <div class="footer-section">
             <h3>Végétalisez</h3>
             <ul>
-                <li><a href="#">Bureaux</a></li>
-                <li><a href="#">Végétalisation</a></li>
-                <li><a href="#">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-entretien">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#vegetalisation-details">Végétalisation</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-complet">Végétalisation et Entretien</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>L'entreprise</h3>
             <ul>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#"></a>Accueil</li>
-                <li><a href="#"></a>FAQ</li>
+                <li><a href="index.php?controller=accueil&action=accueil"></a>Accueil</li>
+                <li><a href="index.php?controller=services&action=QSN">À propos</a></li>
+                <li><a href="index.php?controller=services&action=services">Services</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#faq">FAQ</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#avis">Avis</a></li>
             </ul>
         </div>
-
-        <div class="footer-section">
+            <div class="footer-section">
             <h3>Contactez-nous</h3>
             <ul>
-                <li><a href="#">Devis</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php?controller=services&action=devis">Devis</a></li>
+                <li><a href="index.php?controller=contact&action=contact">Contact</a></li>
             </ul>
         </div>
 

@@ -336,12 +336,12 @@
     <footer>
         <div class="footer-section">
             <div class="footer-logo">
-                <img src="Images/logo_idrymen.webp" alt="Logo Pousse">
+                <img src="Images\logo_idrymen.webp" alt="Logo Pousse">
                 <p>Reconnectez vos espaces à la nature, avec style.</p>
                 <div class="footer-social-icons">
-                    <a href="#"><img src="Images/insta.webp" alt="Instagram"></a>
-                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
-                    <a href="#"><img src="Images/linkedin.webp" alt="LinkedIn"></a>
+                    <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Snapchat"></a>
+                    <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -349,27 +349,27 @@
         <div class="footer-section">
             <h3>Végétalisez</h3>
             <ul>
-                <li><a href="#">Bureaux</a></li>
-                <li><a href="#">Végétalisation</a></li>
-                <li><a href="#">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-entretien">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#vegetalisation-details">Végétalisation</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-complet">Végétalisation et Entretien</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>L'entreprise</h3>
             <ul>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil"></a>Accueil</li>
+                <li><a href="index.php?controller=services&action=QSN">À propos</a></li>
+                <li><a href="index.php?controller=services&action=services">Services</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#faq">FAQ</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#avis">Avis</a></li>
             </ul>
         </div>
-
-        <div class="footer-section">
+            <div class="footer-section">
             <h3>Contactez-nous</h3>
             <ul>
-                <li><a href="#">Devis</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php?controller=services&action=devis">Devis</a></li>
+                <li><a href="index.php?controller=contact&action=contact">Contact</a></li>
             </ul>
         </div>
 

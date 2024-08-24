@@ -71,6 +71,39 @@
             color: #218838;
         }
 
+        .nav-hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #fff;
+                width: 100%;
+                display: none;
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            .nav-hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
         h1 {
             text-align: center;
             color: #4CAF50;
@@ -186,96 +219,104 @@
             color: #555;
         }
 
-        
-footer {
-    width: 100%;
-    background-color: #1b1b1b;
-    color: #f0f0f0;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        footer {
+            width: 100%;
+            background-color: #1b1b1b;
+            color: #f0f0f0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px 20px;
-}
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 20px;
+        }
 
-.footer-section h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
 
-.footer-section ul li {
-    margin-bottom: 10px;
-}
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
 
-.footer-section ul li a {
-    color: #f0f0f0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .footer-section ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-.footer-section ul li a:hover {
-    color: #4CAF50;
-}
+        .footer-section ul li a:hover {
+            color: #4CAF50;
+        }
 
-.footer-logo {
-    text-align: center;
-    margin-bottom: 10px;
-}
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-.footer-logo img {
-    max-width: 120px;
-    margin-bottom: 10px;
-}
+        .footer-logo img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
 
-.footer-social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
 
-.footer-social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
+        .footer-social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
+        }
 
-.footer-social-icons img:hover {
-    transform: scale(1.2);
-}
+        .footer-social-icons img:hover {
+            transform: scale(1.2);
+        }
 
-.footer-credits {
-    font-size: 14px;
-    text-align: center;
-    width: 100%;
-    padding-top: 20px;
-}
+        .footer-credits {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            padding-top: 20px;
+        }
 
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .footer-section {
-        text-align: center;
-    }
+            .footer-section {
+                text-align: center;
+            }
 
-    .footer-credits {
-        text-align: center;
-    }
-}
+            .footer-credits {
+                text-align: center;
+            }
+
+            .offer-price-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .offer-price {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -435,7 +476,7 @@ footer {
                 <p>Reconnectez vos espaces à la nature, avec style.</p>
                 <div class="footer-social-icons">
                     <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
-                    <a href="#"><img src="Images/snap.webp" alt="Pinterest"></a>
+                    <a href="#"><img src="Images/snap.webp" alt="Snapchat"></a>
                     <a href="#"><img src="Images\linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
@@ -444,33 +485,35 @@ footer {
         <div class="footer-section">
             <h3>Végétalisez</h3>
             <ul>
-                <li><a href="#">Bureaux</a></li>
-                <li><a href="#">Végétalisation</a></li>
-                <li><a href="#">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-entretien">Entretien</a></li>
+                <li><a href="index.php?controller=services&action=services#vegetalisation-details">Végétalisation</a></li>
+                <li><a href="index.php?controller=services&action=services#offer-complet">Végétalisation et Entretien</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>L'entreprise</h3>
             <ul>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil"></a>Accueil</li>
+                <li><a href="index.php?controller=services&action=QSN">À propos</a></li>
+                <li><a href="index.php?controller=services&action=services">Services</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#faq">FAQ</a></li>
+                <li><a href="index.php?controller=accueil&action=accueil#avis">Avis</a></li>
             </ul>
         </div>
-
-        <div class="footer-section">
+            <div class="footer-section">
             <h3>Contactez-nous</h3>
             <ul>
-                <li><a href="#">Devis</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php?controller=services&action=devis">Devis</a></li>
+                <li><a href="index.php?controller=contact&action=contact">Contact</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h3>Informations Légales</h3>
             <ul>
-                <li><a href="#">Mentions Légales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="index.php?controller=mentions&action=mentions">Mentions Légales</a></li>
+                <li><a href="index.php?controller=mentions&action=politique">Politique de confidentialité</a></li>
             </ul>
         </div>
 
@@ -492,6 +535,15 @@ footer {
                 arrow.innerHTML = "&#x25BC;";
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.nav-hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
     </script>
 
 </body>

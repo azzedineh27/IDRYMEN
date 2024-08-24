@@ -261,7 +261,7 @@ nav, .nav-item, .site-name {
     background: rgba(255, 255, 255, 0.8);
     padding: 25px 45px 25px 25px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
