@@ -14,132 +14,137 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 1));
-    margin: 0; /* Ensure no margin */
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 1));
+            margin: 0;
+        }
 
-.nav-left {
-    display: flex;
-    align-items: center;
-}
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
 
-.nav-logo {
-    height: 50px;
-    margin-right: 20px;
-}
+        .nav-logo {
+            height: 50px;
+            margin-right: 20px;
+        }
 
-.site-name {
-    font-weight: bold;
-    color: #4CAF50;
-    font-size: 1.5em;
-}
-nav, .nav-item, .site-name {
-    font-family: 'Poppins', sans-serif;
-}
+        .site-name {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 1.5em;
+        }
 
+        nav,
+        .nav-item,
+        .site-name {
+            font-family: 'Poppins', sans-serif;
+        }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 1;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
 
-.nav-item {
-    position: relative;
-    color: #4CAF50;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
+        .nav-item {
+            position: relative;
+            color: #4CAF50;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
 
-.nav-item span {
-    position: relative;
-    z-index: 1;
-}
+        .nav-item span {
+            position: relative;
+            z-index: 1;
+        }
 
-.nav-item::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #4CAF50;
-    transition: width 0.4s ease-in-out;
-}
+        .nav-item::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #4CAF50;
+            transition: width 0.4s ease-in-out;
+        }
 
-.nav-item:hover {
-    color: #2e7d32;
-}
+        .nav-item:hover {
+            color: #2e7d32;
+        }
 
-.nav-item:hover::before {
-    width: 100%;
-}
+        .nav-item:hover::before {
+            width: 100%;
+        }
 
-.nav-hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #4CAF50;
-}
+        .nav-hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4CAF50;
+        }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #fff;
-        width: 100%;
-        display: none;
-    }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #fff;
+                width: 100%;
+                display: none;
+            }
 
-    .nav-item {
-        margin: 10px 0;
-    }
+            .nav-item {
+                margin: 10px 0;
+            }
 
-    .nav-hamburger {
-        display: block;
-    }
+            .nav-hamburger {
+                display: block;
+            }
 
-    .nav-links.active {
-        display: flex;
-    }
-}
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
         .devis-section {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 100px 20px 40px 20px;
         }
+
         .devis-title {
             font-size: 2em;
             font-weight: bold;
@@ -147,6 +152,7 @@ nav, .nav-item, .site-name {
             margin-bottom: 20px;
             text-align: center;
         }
+
         .devis-form {
             width: 100%;
             max-width: 600px;
@@ -154,25 +160,29 @@ nav, .nav-item, .site-name {
             flex-direction: column;
             gap: 20px;
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
             background-color: #fff;
             border-radius: 8px;
         }
+
         .form-group {
             display: flex;
             flex-direction: column;
         }
+
         .form-group label {
             font-weight: bold;
             margin-bottom: 8px;
             color: #25283B;
         }
+
         .form-group input {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em;
         }
+
         .form-group button {
             padding: 10px;
             background-color: #4CAF50;
@@ -183,9 +193,11 @@ nav, .nav-item, .site-name {
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .form-group button:hover {
             background-color: #388E3C;
         }
+
         .summary {
             display: none;
             padding: 20px;
@@ -195,21 +207,23 @@ nav, .nav-item, .site-name {
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .summary-title {
             font-size: 1.5em;
             font-weight: bold;
             color: #4CAF50;
             margin-bottom: 10px;
         }
+
         .summary-content {
             font-size: 1em;
             color: #25283B;
         }
-        /* Décale la liste des plantes sélectionnées vers la droite */
+
         .summary-content ul {
             margin-left: 20px;
         }
-        /* Style pour le bouton PDF similaire au bouton "Soumettre" */
+
         #download-pdf {
             padding: 10px;
             background-color: #4CAF50;
@@ -221,18 +235,20 @@ nav, .nav-item, .site-name {
             transition: background-color 0.3s;
             margin-top: 15px;
         }
+
         #download-pdf:hover {
             background-color: #388E3C;
         }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="nav-left">
             <img src="Images/logo_idrymen.webp" alt="Logo" class="nav-logo">
             <span class="site-name">IDRYMEN</span>
         </div>
-        <div class="nav-hamburger">
+        <div class="nav-hamburger" onclick="toggleMenu()">
             <span class="material-symbols-outlined">menu</span>
         </div>
         <div class="nav-links">
@@ -249,19 +265,19 @@ nav, .nav-item, .site-name {
             <div class="form-group">
                 <label for="plant-sizes">Sélectionnez la taille des plantes et la quantité</label>
                 <div>
-                    <label>Taille S (10-50 cm) - 10€</label>
+                    <label>Taille S (10-50 cm)</label>
                     <input type="number" id="size-s" name="size_s" min="0" value="0">
                 </div>
                 <div>
-                    <label>Taille M (50-80 cm) - 20€</label>
+                    <label>Taille M (50-80 cm)</label>
                     <input type="number" id="size-m" name="size_m" min="0" value="0">
                 </div>
                 <div>
-                    <label>Taille L (80-120 cm) - 30€</label>
+                    <label>Taille L (80-120 cm)</label>
                     <input type="number" id="size-l" name="size_l" min="0" value="0">
                 </div>
                 <div>
-                    <label>Taille XL (120-200 cm) - 40€</label>
+                    <label>Taille XL (120-200 cm)</label>
                     <input type="number" id="size-xl" name="size_xl" min="0" value="0">
                 </div>
             </div>
@@ -285,15 +301,6 @@ nav, .nav-item, .site-name {
                 <label><input type="radio" name="projectType" value="Entretien et Végétalisation" required>Entretien et Végétalisation</label>
             </div>
             <div class="form-group">
-                <label>Budget</label>
-                <label><input type="radio" name="budget" value="0-500" required>0-500€</label>
-                <label><input type="radio" name="budget" value="500-1000" required>500-1000€</label>
-                <label><input type="radio" name="budget" value="1000-2500" required>1000-2500€</label>
-                <label><input type="radio" name="budget" value="2500-5000" required>2500-5000€</label>
-                <label><input type="radio" name="budget" value="5000-10000" required>5000-10000€</label>
-                <label><input type="radio" name="budget" value="plus10000" required>Plus de 10000€</label>
-            </div>
-            <div class="form-group">
                 <button type="submit">Soumettre</button>
             </div>
         </form>
@@ -306,6 +313,11 @@ nav, .nav-item, .site-name {
     <!-- Inclure jsPDF via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
         function generateSummary(event) {
             event.preventDefault(); // Empêche l'envoi du formulaire
             // Récupère les données du formulaire
@@ -317,9 +329,6 @@ nav, .nav-item, .site-name {
             const lastName = document.getElementById('lastName').value;
             const country = document.getElementById('country').value;
             const projectType = document.querySelector('input[name="projectType"]:checked').value;
-            const budget = document.querySelector('input[name="budget"]:checked').value;
-            // Calcul du coût total
-            const totalCost = (sizeS * 10) + (sizeM * 20) + (sizeL * 30) + (sizeXL * 40);
             // Récupère la date actuelle
             const date = new Date();
             const formattedDate = date.toLocaleDateString();
@@ -328,7 +337,6 @@ nav, .nav-item, .site-name {
                 <p><strong>Date :</strong> ${formattedDate}</p>
                 <p><strong>Client :</strong> ${firstName} ${lastName} (${country})</p>
                 <p><strong>Type de projet :</strong> ${projectType}</p>
-                <p><strong>Budget :</strong> ${budget}</p>
                 <p><strong>Plantes sélectionnées :</strong></p>
                 <ul>
                     <li>Taille S : ${sizeS} plante(s)</li>
@@ -336,7 +344,6 @@ nav, .nav-item, .site-name {
                     <li>Taille L : ${sizeL} plante(s)</li>
                     <li>Taille XL : ${sizeXL} plante(s)</li>
                 </ul>
-                <p><strong>Coût total :</strong> ${totalCost}€</p>
             `;
             // Affiche le récapitulatif
             document.getElementById('summary-content').innerHTML = summaryContent;
@@ -344,6 +351,7 @@ nav, .nav-item, .site-name {
             // Affiche le bouton de téléchargement PDF
             document.getElementById('download-pdf').style.display = 'inline-block';
         }
+
         function downloadPDF() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
@@ -365,4 +373,5 @@ nav, .nav-item, .site-name {
         }
     </script>
 </body>
+
 </html>
