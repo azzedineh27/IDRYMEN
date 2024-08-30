@@ -646,7 +646,7 @@ footer {
         <div class="footer-section">
             <div class="footer-logo">
                 <img src="Images\logo_idrymen.webp" alt="Logo Pousse">
-                <p>Reconnectez vos espaces à la nature, avec style.</p>
+                <p>Végétalisez vos espaces de la meilleur des façons avec Idrymen !</p>
                 <div class="footer-social-icons">
                     <a href="#"><img src="Images\insta.webp" alt="Instagram"></a>
                     <a href="#"><img src="Images/snap.webp" alt="Snapchat"></a>

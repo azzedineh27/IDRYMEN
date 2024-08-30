@@ -132,7 +132,7 @@
 <body>
     <nav>
         <div class="nav-left">
-            <img src="logo_idrymen.webp" alt="Logo" class="nav-logo">
+            <img src="Images/logo_idrymen.webp" alt="Logo" class="nav-logo">
             <span class="site-name">IDRYMEN</span>
         </div>
         <div class="nav-hamburger">
