@@ -552,10 +552,8 @@ footer {
             <div class="slide"><img src="Images/opuntia.jpg" alt="Opuntia"></div>
             <div class="slide"><img src="Images/dracaena.jpg" alt="Dracaena"></div>
             <div class="slide"><img src="Images/ficus.jpeg" alt="Ficus"></div>
-            <div class="slide"><img src="Images/ficus.jpeg" alt="Ficus"></div>
-            <div class="slide"><img src="Images/ficus.jpeg" alt="Ficus"></div>
-            <div class="slide"><img src="Images/ficus.jpeg" alt="Ficus"></div>
-            <div class="slide"><img src="Images/ficus.jpeg" alt="Ficus"></div>
+            <div class="slide"><img src="Images/octopus.jfif" alt="Ficus"></div>
+            <div class="slide"><img src="Images/nonante.jpg" alt="Ficus"></div>
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>

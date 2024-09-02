@@ -148,7 +148,7 @@ nav {
 
 .banner .message {
     position: absolute;
-    top: 10%; /* Réduire ce pourcentage pour éloigner le texte de l'animation */
+    top: 10%; 
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
@@ -160,8 +160,8 @@ nav {
 
 @media (max-width: 768px) {
     .banner .message {
-        top: 15%; /* Ajuster cette valeur pour plus d'espace sur les petits écrans */
-        font-size: 40px; /* Réduire la taille de la police pour mieux s'adapter aux écrans plus petits */
+        top: 15%; 
+        font-size: 40px; 
     }
 }
 
